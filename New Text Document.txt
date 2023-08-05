@@ -1,0 +1,350 @@
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ get status
+bash: get: command not found
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ get status
+bash: get: command not found
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ get status
+bash: get: command not found
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main.c
+        math.c
+        math.h
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git add .
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   main.c
+        new file:   math.c
+        new file:   math.h
+
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git commit -m "v1"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Joo@DESKTOP-786KD5A.(none)')
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$  git config --global user.email "mohamedyossef508@gmail.com"
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$  git config --global user.name "mohamed youssef"
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git commit -m "v1"
+[master (root-commit) d928bf4] v1
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main.c
+ create mode 100644 math.c
+ create mode 100644 math.h
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git log
+commit d928bf41c7756f24727183f6b3263a83b6e22087 (HEAD -> master)
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:33:10 2023 +0200
+
+    v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   main.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git add .
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   main.c
+
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git commit -m "v2"
+[master d9b1a28] v2
+ 1 file changed, 7 insertions(+)
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git log
+commit d9b1a28b1fd7417b0fe41c2987fdc2055be5fb55 (HEAD -> master)
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:41:36 2023 +0200
+
+    v2
+
+commit d928bf41c7756f24727183f6b3263a83b6e22087
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:33:10 2023 +0200
+
+    v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git checkout  d928bf41c7756f24727183f6b3263a83b6e22087
+Note: switching to 'd928bf41c7756f24727183f6b3263a83b6e22087'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at d928bf4 v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder ((d928bf4...))
+$ git checkout d9b1a28b1fd7417b0fe41c2987fdc2055be5fb55
+Previous HEAD position was d928bf4 v1
+HEAD is now at d9b1a28 v2
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder ((d9b1a28...))
+$ git log
+commit d9b1a28b1fd7417b0fe41c2987fdc2055be5fb55 (HEAD, master)
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:41:36 2023 +0200
+
+    v2
+
+commit d928bf41c7756f24727183f6b3263a83b6e22087
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:33:10 2023 +0200
+
+    v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder ((d9b1a28...))
+$ git checkout  d928bf41c7756f24727183f6b3263a83b6e22087
+Previous HEAD position was d9b1a28 v2
+HEAD is now at d928bf4 v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder ((d928bf4...))
+$ git log
+commit d928bf41c7756f24727183f6b3263a83b6e22087 (HEAD)
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:33:10 2023 +0200
+
+    v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder ((d928bf4...))
+$ git checkout master
+Previous HEAD position was d928bf4 v1
+Switched to branch 'master'
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git log
+commit d9b1a28b1fd7417b0fe41c2987fdc2055be5fb55 (HEAD -> master)
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:41:36 2023 +0200
+
+    v2
+
+commit d928bf41c7756f24727183f6b3263a83b6e22087
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:33:10 2023 +0200
+
+    v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git branch
+* master
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git reset --hard d9b1a28b1fd7417b0fe41c2987fdc2055be5fb55
+HEAD is now at d9b1a28 v2
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git log
+commit d9b1a28b1fd7417b0fe41c2987fdc2055be5fb55 (HEAD -> master)
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:41:36 2023 +0200
+
+    v2
+
+commit d928bf41c7756f24727183f6b3263a83b6e22087
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:33:10 2023 +0200
+
+    v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$  git reset --hard  d928bf41c7756f24727183f6b3263a83b6e22087
+HEAD is now at d928bf4 v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git log
+commit d928bf41c7756f24727183f6b3263a83b6e22087 (HEAD -> master)
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:33:10 2023 +0200
+
+    v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git commit -m "v3"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   main.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git add .
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git log
+commit d928bf41c7756f24727183f6b3263a83b6e22087 (HEAD -> master)
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:33:10 2023 +0200
+
+    v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git commit -m "v3"
+[master ca2de2a] v3
+ 1 file changed, 7 insertions(+)
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git log
+commit ca2de2a9756b0b4cfc881d5c68cba653bb5b0898 (HEAD -> master)
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 16:45:00 2023 +0200
+
+    v3
+
+commit d928bf41c7756f24727183f6b3263a83b6e22087
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:33:10 2023 +0200
+
+    v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ get reset --mixed  d928bf41c7756f24727183f6b3263a83b6e22087
+bash: get: command not found
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git log
+commit ca2de2a9756b0b4cfc881d5c68cba653bb5b0898 (HEAD -> master)
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 16:45:00 2023 +0200
+
+    v3
+
+commit d928bf41c7756f24727183f6b3263a83b6e22087
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:33:10 2023 +0200
+
+    v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git reset --mixed  d928bf41c7756f24727183f6b3263a83b6e22087
+Unstaged changes after reset:
+M       main.c
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   main.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git log
+commit d928bf41c7756f24727183f6b3263a83b6e22087 (HEAD -> master)
+Author: mohamed youssef <mohamedyossef508@gmail.com>
+Date:   Fri Aug 4 15:33:10 2023 +0200
+
+    v1
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git remote add origin https://github.com/mohamedyossef029/task1.git
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git push -u origin master
+fatal: User cancelled dialog.
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/bin/git-askpass.exe'
+Username for 'https://github.com':
+remote: No anonymous write access.
+fatal: Authentication failed for 'https://github.com/mohamedyossef029/task1.git/'
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$ git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/mohamedyossef029/task1.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Joo@DESKTOP-786KD5A MINGW64 ~/Desktop/Embedded/version control/git/New folder (master)
+$
